@@ -10,15 +10,7 @@
     "polymer",
     "input"
   ],
-  "main": [
-    "paper-input.html",
-    "paper-textarea.html",
-    "paper-input-behavior.html",
-    "paper-input-container.html",
-    "paper-input-error.html",
-    "paper-input-addon-behavior.html",
-    "paper-input-char-counter.html"
-  ],
+  "main": "paper-input.html",
   "private": true,
   "repository": {
     "type": "git",
