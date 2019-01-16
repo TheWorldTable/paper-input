@@ -127,7 +127,7 @@ style this element.
       <label hidden$="[[!label]]" aria-hidden="true" for$="[[_inputId]]">[[label]]</label>
 
       <input is="iron-input"
-        id$="[[_inputId]]"
+        alt-id$="[[_inputId]]"
         class="input-element"
         aria-labelledby$="[[_ariaLabelledBy]]"
         aria-describedby$="[[_ariaDescribedBy]]"
@@ -184,6 +184,14 @@ style this element.
     behaviors: [
       Polymer.IronFormElementBehavior,
       Polymer.PaperInputBehavior
-    ]
+    ],
+    observers: [
+      '_updateId(_inputId)'
+    ],
+    _updateId: function (id) {
+      if (this._inputId) {
+        this.$$('[alt-id]').id = this._inputId;
+      }
+    }
   });
 </script>
